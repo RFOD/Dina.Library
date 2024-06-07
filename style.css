@@ -1,0 +1,147 @@
+body{
+    background-color: #003C43;
+    font-family: "Caveat", cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    user-select: none;
+}
+h1
+{
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 1rem;
+    margin-top: 4rem;
+    color: #5f8b87;
+}
+#logo
+{
+    width: 100vw;
+    text-align: center;
+}
+.library
+{
+    display: grid;
+    grid-template: repeat(2, 18rem) / repeat(5, 22rem);
+}
+
+.button
+{
+    position: relative;
+    left: 87%;
+    top: 1rem;
+    background-color: #77B0AA;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition-duration: 100ms;
+    transition-timing-function: ease-in-out;
+}
+.button:hover
+{
+    width: 8.2rem;
+    height: 3.1rem;
+    background-color: #E3FEF7;
+    z-index: 1;
+}
+.book
+{
+    background-color: #135D66;
+    width: 20rem;
+    height: 15rem;
+    margin: 1rem;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(31, 31, 31);
+}
+.center-flex
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headingContainer
+{
+    color: #c9c9c9;
+    font-size:  4rem;
+    margin-bottom: 6rem;
+}
+.bookReadingStatusFalse
+{
+    left: 40%;
+    top: 3rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: rgb(184, 184, 80);
+}
+.bookReadingStatusTrue
+{
+    left: 40%;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    top: 3rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgb(81, 192, 109);
+}
+.bookDelete
+{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    left: 68%;
+    top: 1rem;
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-color: rgb(151, 28, 28);
+    color: #cccccc;
+}
+.bookDelete:hover
+{
+    width: 6rem;
+    height: 2.3rem;
+    background-color: rgb(199, 34, 34);
+    color: rgb(233, 233, 233);
+}
+.bookReadingStatusFalse:hover
+{
+    width: 5rem;
+    height: 2.1rem;
+    background-color: rgb(226, 226, 100);
+    color: rgb(20, 20, 20);
+}
+.bookReadingStatusTrue:hover
+{
+    width: 5rem;
+    height: 2.1rem;
+    background-color: rgb(102, 236, 136);
+    color: rgb(20, 20, 20);
+}
+.bookTitle
+{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.bookAuthor, .bookPages, .bookLanguage
+{
+    margin: 0.4rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}

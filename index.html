@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="center-flex">
+        <h1 class="headingContainer">Online Library</h1>
+    </div>
+
+    <div class="center-flex">
+        <section class="library" data-library>
+            <div class="center-flex"   style="display: none !important;">
+                <div class="book">
+                    <h2 data-title class="bookTitle">Title: Big Foot</h2>
+                    <p data-author class="bookAuthor">Author: Mark Luther King</p>
+                    <p data-language class="bookLanguage">Languge: English</p>
+                    <p data-pages class="bookPages">Pages: 236</p>
+                    <div class="button bookReadingStatusTrue" data-toggle-status>Read</div>
+                    <div class="button bookDelete">Delete</div>
+                </div>
+            </div>
+        </section>
+    </div> 
+
+
+    <div class="button" data-create-book>New Book</div>
+    <div id="logo">
+        <h1>Made by Dina</h1>
+    </div>
+</body>
+</html>
