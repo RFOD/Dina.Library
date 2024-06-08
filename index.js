@@ -31,19 +31,6 @@ function appendToLibrary(object)
     library.push(object)
     generateBook(object.title, object.author, object.pages,object.language)
 }
-function removeBook(event) {
-    if (event.target.classList.contains('bookDelete')) {
-
-        const bookToRemove = event.target.closest('.mainBook');
-        if (bookToRemove) {
-            container.removeChild(bookToRemove);
-            const index = library.findIndex((book) => book.index === parseInt(bookToRemove.dataset.index));
-            if (index !== -1) {
-                library.splice(index, 1);
-            }
-        }
-    }
-}
 function generateBook(title, author, pages, language) {
     const book = document.createElement("div");
     book.setAttribute('class', 'center-flex mainBook');
@@ -57,13 +44,26 @@ function generateBook(title, author, pages, language) {
         <div class="button bookReadingStatusFalse" data-toggle-status>Read</div>
         <div class="button bookDelete" data-delete-book>Delete</div>
     `;
-    container.addEventListener('click', removeBook);
+    container.addEventListener('click', (event) => removeBook(event))
     container.appendChild(book);
     bookOrder++;
     changeStatus = document.querySelectorAll('[data-toggle-status]')
     changeStatus.forEach(button => {
         button.addEventListener('click', changeReadingStatus);
     });
+}
+function removeBook(event)
+{
+    if (event.target.classList.contains('bookDelete'))
+        {
+            const book = event.target.closest('.mainBook')
+            container.removeChild(book)
+            const index = library.findIndex((book) => book.index === parseFloat(event.target.dataset.index) )
+            if(index !== -1)
+                {
+                    library.splice(index, 1)
+                }
+        }
 }
 function changeReadingStatus(event) {
     let button = event.target;
@@ -82,7 +82,7 @@ if(changeStatus)
     {
         container.addEventListener('click', function(event) {
             if (event.target.matches('[data-toggle-status]')) {
-                changeReadingStatus(event.target);
+                changeReadingStatus(event);
             }
         });
     }
